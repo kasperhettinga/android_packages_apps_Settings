@@ -382,6 +382,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="start_time_title">Start</string>
     <string name="end_time_title">End</string>
 
+    <!-- Hostname setting -->
+    <string name="device_hostname">Device hostname</string>
+
     <!-- About phone screen,  setting option name-->
     <string name="mod_version">Mackay ROM version</string>
     <string name="mod_version_default">Unknown</string>
