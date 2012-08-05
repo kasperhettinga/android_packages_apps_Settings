@@ -1031,7 +1031,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="gamma_tuning_brightness">Brightness</string>
     <string name="gamma_tuning_saturation">Saturation</string>
 
-    <!--  Other device settings -->
+    <!-- Other device settings -->
     <string name="more_device_controls_title">More\u2026</string>
     <string name="more_device_settings_title">Other device options</string>
     <string name="sensors_motors_title">Sensors &amp; motors</string>
@@ -1053,4 +1053,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- GPS download data over wi-fi only -->
     <string name="gps_download_data_wifi_only">Download GPS assisted data only over Wi-Fi networks</string>
+
+    <!-- Development Tools - Enable Navigation Bar -->
+    <string name="force_navigation_bar_title">Force Navigation bar</string>
+    <string name="force_navigation_bar_summary">Show additional on-screen navigation buttons</string>
+    <string name="menu_button_enabled">Menu button enabled</string>
+    <string name="menu_button_enabled_summary">Respond to user input via the hardware Menu button</string>
+    <string name="back_button_enabled">Back button enabled</string>
+    <string name="back_button_enabled_summary">Respond to user input via the hardware Back button</string>
 </resources>

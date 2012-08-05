@@ -56,6 +56,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
@@ -67,6 +68,7 @@ import android.view.Gravity;
 import android.view.HardwareRenderer;
 import android.view.IWindowManager;
 import android.view.View;
+import android.view.WindowManagerGlobal;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -161,6 +163,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final int RESULT_DEBUG_APP = 1000;
 
+    private static final String FORCE_NAVIGATION_BAR = "force_navigation_bar";
+    private static final String MENU_BUTTON_ENABLED = "menu_button_enabled";
+    private static final String BACK_BUTTON_ENABLED = "back_button_enabled";
+
     private IWindowManager mWindowManager;
     private IBackupManager mBackupManager;
     private DevicePolicyManager mDpm;
@@ -219,6 +225,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private CheckBoxPreference mAdvancedReboot;
     private CheckBoxPreference mExperimentalWebView;
+    private CheckBoxPreference mForceNavigationBar;
+    private CheckBoxPreference mMenuButtonEnabled;
+    private CheckBoxPreference mBackButtonEnabled;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
     private final ArrayList<CheckBoxPreference> mResetCbPrefs
@@ -357,6 +366,37 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mDevelopmentTools = (PreferenceScreen) findPreference(DEVELOPMENT_TOOLS);
         if (!removePreferenceIfPackageNotInstalled(mDevelopmentTools)) {
             mAllPrefs.add(mDevelopmentTools);
+        }
+
+        // Force Navigation bar related options
+        mForceNavigationBar = (CheckBoxPreference) findPreference(FORCE_NAVIGATION_BAR);
+        mMenuButtonEnabled = (CheckBoxPreference) findPreference(MENU_BUTTON_ENABLED);
+        mBackButtonEnabled = (CheckBoxPreference) findPreference(BACK_BUTTON_ENABLED);
+        PreferenceCategory inputCategory = (PreferenceCategory) findPreference("debug_input_category");
+
+        // Only visible on devices that does not have a navigation bar already
+        boolean needsNavigationBar = false, hasMenuKey = true;
+        try {
+            IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
+            needsNavigationBar = wm.needsNavigationBar();
+            hasMenuKey = wm.hasMenuKeyEnabled();
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error getting navigation bar and menu key status");
+        }
+
+        if (needsNavigationBar) {
+            inputCategory.removePreference(mForceNavigationBar);
+            inputCategory.removePreference(mBackButtonEnabled);
+            inputCategory.removePreference(mMenuButtonEnabled);
+        } else {
+            mAllPrefs.add(mForceNavigationBar);
+            mAllPrefs.add(mBackButtonEnabled);
+
+            if (hasMenuKey) {
+                mAllPrefs.add(mMenuButtonEnabled);
+            } else {
+                inputCategory.removePreference(mMenuButtonEnabled);
+            }
         }
     }
 
@@ -547,6 +587,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateBugreportOptions();
         updateRootAccessOptions();
         updateAdvancedRebootOptions();
+        updateForceNavbarOption();
+        updateMenuButtonEnabledOption();
+        updateBackButtonEnabledOption();
     }
 
     private void writeAdvancedRebootOptions() {
@@ -558,6 +601,52 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private void updateAdvancedRebootOptions() {
         mAdvancedReboot.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.ADVANCED_REBOOT, 0) != 0);
+    }
+
+    private void writeForceNavbarOption(boolean enabled) {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DEV_FORCE_SHOW_NAVBAR, enabled ? 1 : 0);
+
+        if (!enabled) {
+            // Make sure we reset the dependent items to a safe state
+            // and update the UI
+            writeBackButtonEnabledOption(true);
+            writeMenuButtonEnabledOption(true);
+            mBackButtonEnabled.setChecked(true);
+            mMenuButtonEnabled.setChecked(true);
+        }
+    }
+
+    private void updateForceNavbarOption() {
+        mForceNavigationBar.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) != 0);
+    }
+
+    private void writeMenuButtonEnabledOption(boolean enabled) {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DEV_MENU_BUTTON_ENABLED,
+                enabled ? 1 : 0);
+
+        // Force the overflow menu button if the hardware key is not enabled
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.UI_FORCE_OVERFLOW_BUTTON,
+                enabled ? 0 : 1);
+    }
+
+    private void updateMenuButtonEnabledOption() {
+        mMenuButtonEnabled.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.DEV_MENU_BUTTON_ENABLED, 1) == 1);
+    }
+
+    private void writeBackButtonEnabledOption(boolean enabled) {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DEV_BACK_BUTTON_ENABLED,
+                enabled ? 1 : 0);
+    }
+
+    private void updateBackButtonEnabledOption() {
+        mBackButtonEnabled.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.DEV_BACK_BUTTON_ENABLED, 1) == 1);
     }
 
     private void updateAdbOverNetwork() {
@@ -601,6 +690,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         resetRootAccessOptions();
         resetAdbNotifyOptions();
         resetVerifyAppsOverUsbOptions();
+        writeForceNavbarOption(false);
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
         writeAnimationScaleOption(1, mTransitionAnimationScale, null);
         writeAnimationScaleOption(2, mAnimatorDurationScale, null);
@@ -1355,6 +1445,12 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeKillAppLongpressBackOptions();
         } else if (preference == mAdvancedReboot) {
             writeAdvancedRebootOptions();
+        } else if (preference == mForceNavigationBar) {
+            writeForceNavbarOption(mForceNavigationBar.isChecked());
+        } else if (preference == mMenuButtonEnabled) {
+            writeMenuButtonEnabledOption(mMenuButtonEnabled.isChecked());
+        } else if (preference == mBackButtonEnabled) {
+            writeBackButtonEnabledOption(mBackButtonEnabled.isChecked());
         }
 
         return false;
