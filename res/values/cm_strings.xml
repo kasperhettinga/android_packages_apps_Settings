@@ -1028,7 +1028,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="gamma_tuning_contrast">Contrast</string>
     <string name="gamma_tuning_brightness">Brightness</string>
 
-    <!--  Other device settings -->
+    <!-- Other device settings -->
     <string name="more_device_controls_title">More\u2026</string>
     <string name="more_device_settings_title">Other device options</string>
     <string name="sensors_motors_title">Sensors &amp; motors</string>
@@ -1048,4 +1048,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="selinux_enable_title">Security Enhanced Android</string>
     <string name="selinux_enable_warning">You are about to enable SEAndroid, an advanced security mechanism, on your device.\n\nThis option exists for debugging purposes only, and it is very likely that your device isn\'t fully ready for it, which may cause parts (or all) of your hardware to block or hang.\n\nAre you sure you want to proceed?</string>
 
+    <!-- Development Tools - Enable Navigation Bar -->
+    <string name="force_navigation_bar_title">Force Navigation bar</string>
+    <string name="force_navigation_bar_summary">Show additional on-screen navigation buttons</string>
+    <string name="menu_button_enabled">Menu button enabled</string>
+    <string name="menu_button_enabled_summary">Respond to user input via the hardware Menu button</string>
+    <string name="back_button_enabled">Back button enabled</string>
+    <string name="back_button_enabled_summary">Respond to user input via the hardware Back button</string>
 </resources>

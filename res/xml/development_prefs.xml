@@ -148,6 +148,26 @@
             android:title="@string/pointer_location"
             android:summary="@string/pointer_location_summary"/>
 
+        <CheckBoxPreference
+            android:key="force_navigation_bar"
+            android:title="@string/force_navigation_bar_title"
+            android:summary="@string/force_navigation_bar_summary"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="back_button_enabled"
+            android:title="@string/back_button_enabled"
+            android:summary="@string/back_button_enabled_summary"
+            android:defaultValue="true"
+            android:dependency="force_navigation_bar" />
+
+       <CheckBoxPreference
+            android:key="menu_button_enabled"
+            android:title="@string/menu_button_enabled"
+            android:summary="@string/menu_button_enabled_summary"
+            android:defaultValue="true"
+            android:dependency="force_navigation_bar" />
+
     </PreferenceCategory>
 
     <PreferenceCategory android:key="debug_drawing_category"
