@@ -42,6 +42,12 @@
         android:title="@string/pref_use_16bpp_alpha_title"
         android:summary="@string/pref_use_16bpp_alpha_summary" />
 
+    <CheckBoxPreference
+        android:key="high_end_gfx"
+        android:title="@string/high_end_gfx_title"
+        android:summary="@string/high_end_gfx_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="pref_use_dithering"
         android:persistent="false"

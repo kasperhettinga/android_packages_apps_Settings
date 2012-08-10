@@ -4874,6 +4874,11 @@
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
 
+    <!-- High End Gfx Effects -->
+    <string name="display_category_advanced_title">Advanced</string>
+    <string name="high_end_gfx_title">High end graphic effects</string>
+    <string name="high_end_gfx_summary">Enable graphic effects disabled on lower end devices</string>
+
     <string name="ok">OK</string>
 
     <!-- Development settings: title for the field that shows the "App ID" development identifier
