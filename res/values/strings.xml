@@ -4402,7 +4402,7 @@
     <!-- Status bar  -->
     <string name="combined_status_bar_title">@string/status_bar_title</string>
     <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_clock_title">Clock</string>
+    <string name="status_bar_clock_title">Clock style</string>
     <string name="status_bar_general_title">General</string>
     <string name="status_bar_show_clock_title">Show clock</string>
     <string name="status_bar_am_pm_title">AM/PM style</string>
