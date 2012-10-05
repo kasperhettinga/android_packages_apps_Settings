@@ -51,6 +51,17 @@
             android:fragment="com.android.settings.cyanogenmod.QuietHours"
             android:title="@string/quiet_hours_title" />
 
+    <!-- Dsp manager -->
+    <Preference
+            android:key="dspmanager"
+            android:title="@string/dsp_title"
+            android:summary="@string/dsp_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.bel.android.dspmanager"
+                android:targetClass="com.bel.android.dspmanager.activity.DSPManager" />
+    </Preference>
+
     <CheckBoxPreference
             android:key="safe_headset_restore"
             android:title="@string/safe_headset_restore_title"
