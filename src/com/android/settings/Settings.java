@@ -1037,7 +1037,6 @@ public class Settings extends PreferenceActivity
             } else if (header.id == R.id.wifi_settings
                     || header.id == R.id.bluetooth_settings
                     || header.id == R.id.mobile_network_settings
-                    || header.id == R.id.profiles_settings
                     || header.id == R.id.voice_wakeup_settings
                     || header.id == R.id.location_settings) {
                 return HEADER_TYPE_SWITCH;
