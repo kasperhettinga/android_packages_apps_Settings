@@ -2243,12 +2243,9 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="ime_switcher_notify">Invoermethodemelding</string>
     <string name="ime_switcher_notify_summary">Melding tonen voor wijzigen invoermethode</string>
     <string name="status_bar_title">Statusbalk</string>
-    <string name="status_bar_clock_title">Klok</string>
     <string name="status_bar_general_title">Algemeen</string>
-    <string name="status_bar_show_clock_title">Klok tonen</string>
-    <string name="status_bar_am_pm_title">12-uursformaat</string>
-    <string name="status_bar_am_pm_info">24-uursformaat ingeschakeld</string>
     <string name="status_bar_battery_title">Opmaak batterijstatus</string>
+    <string name="status_bar_style_title">Stijl</string>
     <string name="status_bar_toggle_brightness">Helderheid beheren</string>
     <string name="status_bar_toggle_brightness_summary">Helderheid wijzigen door over de statusbalk te slepen</string>
     <string name="status_bar_toggle_info">Automatische helderheid ingeschakeld</string>
@@ -2358,4 +2355,26 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="headset_category_title">Headset</string>
     <string name="lockscreen_maximize_widgets_title">Widgets maximaliseren</string>
     <string name="lockscreen_maximize_widgets_summary">Widgets gemaximaliseerd en ontgrendeling geminimaliseerd tonen indien het scherm wordt ingeschakeld</string>
+
+    <!-- Status bar | Clock -->
+    <string name="status_bar_clock">Klok en datum</string>
+    <string name="status_bar_clock_title">Klok en datum stijl</string>
+    <string name="clock_title_enable">Klokplaatsing</string>
+    <string name="clock_enabled">Ingeschakeld</string>
+    <string name="clock_disabled">Uitgeschakeld</string>
+    <string name="clock_color_title">Klokleur</string>
+    <string name="status_bar_show_clock_title">Toon klok</string>
+    <string name="status_bar_am_pm_title">12/24-uurs stijl</string>
+    <string name="status_bar_am_pm_info">24-uurs klok is ingegeschakeld</string>
+    <string name="enable_clock_weekday">Dag van de week</string>
+    <string name="enable_clock_weekday_summary">Afgekorte dag van de week voor de tijd</string>
+    <string name="right_clock">Klok rechts</string>
+    <string name="center_clock">Klok in het midden</string>
+    <string name="dont_show">Niet tonen</string>
+    <string name="clock_date_display">Datum</string>
+    <string name="clock_date_display_summary">Toon aangepaste datum voor de klok</string>
+    <string name="clock_date_style">Datumstijl</string>
+    <string name="clock_date_format">Datumweergave</string>
+    <string name="clock_date_string_edittext_title">Moet weergegeven worden in datumformaat, bijv. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Tekst invoeren</string>
 </resources>
