@@ -5154,4 +5154,8 @@
     <string name="hex_hint">#FF000000</string>
     <string name="set">Set</string>
     <string name="ics_color">Holo</string>
+
+    <!-- Recents Ram Bar -->
+    <string name="ram_bar">Recents RAM Bar</string>
+    <string name="ram_bar_summary">Shows RAM usage in the recents menu</string>
 </resources>

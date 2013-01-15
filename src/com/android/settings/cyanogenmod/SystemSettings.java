@@ -24,6 +24,7 @@ import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.CheckBoxPreference;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.IWindowManager;
@@ -42,6 +43,7 @@ public class SystemSettings extends SettingsPreferenceFragment {
     private static final String KEY_HARDWARE_KEYS = "hardware_keys";
     private static final String KEY_NAVIGATION_BAR = "navigation_bar";
     private static final String KEY_LOCK_CLOCK = "lock_clock";
+    private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
     private static final String KEY_STATUS_BAR = "status_bar";
     private static final String KEY_QUICK_SETTINGS = "quick_settings_panel";
     private static final String KEY_NOTIFICATION_DRAWER = "notification_drawer";
@@ -49,6 +51,7 @@ public class SystemSettings extends SettingsPreferenceFragment {
 
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
+    private CheckBoxPreference mRamBar;
     private boolean mIsPrimary;
 
     @Override
@@ -122,6 +125,11 @@ public class SystemSettings extends SettingsPreferenceFragment {
         removePreferenceIfPackageNotInstalled(findPreference(KEY_LOCK_CLOCK));
     }
 
+	mRamBar = (CheckBoxPreference) findPreference(KEY_RECENTS_RAM_BAR);
+        mRamBar.setChecked(Settings.System.getInt(
+                getActivity().getContentResolver(),
+                Settings.System.RECENTS_RAM_BAR, 0) == 1);
+                
     private void updateLightPulseDescription() {
         if (Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NOTIFICATION_LIGHT_PULSE, 0) == 1) {
@@ -151,6 +159,18 @@ public class SystemSettings extends SettingsPreferenceFragment {
         if (mIsPrimary) {
             updateBatteryPulseDescription();
         }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+            Preference preference) {
+        if (preference == mRamBar) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.RECENTS_RAM_BAR,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override

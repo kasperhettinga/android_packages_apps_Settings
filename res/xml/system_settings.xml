@@ -54,6 +54,11 @@
         android:fragment="com.android.settings.cyanogenmod.NavBar"
         android:title="@string/navigation_bar_title" />
 
+    <CheckBoxPreference
+        android:key="recents_ram_bar"
+        android:title="@string/ram_bar"
+        android:summary="@string/ram_bar_summary" />
+
     <PreferenceScreen
         android:key="notification_pulse"
         android:title="@string/notification_pulse_title"
