@@ -14,6 +14,21 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Recents RAM bar-->
+    <string-array name="entries_ram_bar_mode">
+        <item>@string/ram_bar_none</item>
+        <item>@string/ram_bar_apps</item>
+        <item>@string/ram_bar_cache</item>
+        <item>@string/ram_bar_other</item>
+    </string-array>
+
+    <string-array name="values_ram_bar_mode" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
     <!-- Wi-Fi settings. Presented as a list dialog to the user to choose the Wi-Fi region code. -->
     <string-array name="wifi_countrycode_entries">
         <item>United States</item>
