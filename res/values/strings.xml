@@ -5143,6 +5143,19 @@
     <string name="safe_headset_volume_summary">Prevent loud volume levels when headset is first plugged in</string>
 
     <string name="keyguard_picker_all_widgets_title">Show all widgets</string>
+
+    <!-- Automatic brightness customization -->
+    <string name="light_sensor_current_value">Current light sensor value: <xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">Automatic brightness levels</string>
+    <string name="auto_brightness_level_format"><xliff:g id="start_level">%1$s</xliff:g> -\n<xliff:g id="end_level">%2$s</xliff:g> lux</string>
+    <string name="auto_brightness_brightness_format"><xliff:g id="percent">%s</xliff:g>%%</string>
+    <string name="auto_brightness_adjust_button">Adjust levels</string>
+    <string name="auto_brightness_reset_button">Reset to default</string>
+    <string name="auto_brightness_remove_button">Remove</string>
+    <string name="auto_brightness_add_line">Add new line</string>
+    <string name="auto_brightness_level_dialog_title">Level configuration</string>
+    <string name="auto_brightness_ambient_light_level">Ambient light brightness</string>
+    <string name="auto_brightness_backlight_level">Display backlight brightness</string>
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
     <!-- Color Picker -->
