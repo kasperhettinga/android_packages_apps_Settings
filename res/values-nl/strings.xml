@@ -2377,4 +2377,24 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="clock_date_format">Datumweergave</string>
     <string name="clock_date_string_edittext_title">Moet weergegeven worden in datumformaat, bijv. MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Tekst invoeren</string>
+
+    <!-- Recents Ram Bar -->
+    <string name="ram_bar">Recente apps RAM-balk</string>
+    <string name="ram_bar_note_title">Opgelet</string>
+    <string name="ram_bar_note_summary">Deze RAM-balk toont hoe android je beschikbare geheugen werkelijk gebruikt. Apps in de achtergrond of in de cache kunnen sneller opgestart worden</string>
+    <string name="ram_bar_mode_title">Recente apps RAM-balk modus</string>
+    <string name="ram_bar_mode_dialog_title">Toon RAM-balk in recente apps</string>
+    <string name="ram_bar_none">Geen</string>
+    <string name="ram_bar_apps">Apps</string>
+    <string name="ram_bar_cache">Apps en cache</string>
+    <string name="ram_bar_other">Apps, cache en overige</string>
+    <string name="ram_bar_style_cat">RAM-balk stijl</string>
+    <string name="ram_bar_color_app_mem_color">Apps RAM kleur</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM kleur</string>
+    <string name="ram_bar_color_total_mem_color">Overige RAM kleur</string>
+    <string name="ram_bar_color_enabled">Ingeschakeld</string>
+    <string name="ram_bar_color_disabled">Uitgeschakeld</string>
+    <string name="ram_bar_button_help">Help</string>
+    <string name="ram_bar_button_reset">Reset kleuren</string>
+
 </resources>

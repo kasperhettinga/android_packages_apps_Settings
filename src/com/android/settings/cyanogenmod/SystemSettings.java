@@ -51,7 +51,7 @@ public class SystemSettings extends SettingsPreferenceFragment {
 
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
-    private CheckBoxPreference mRamBar;
+    private Preference mRamBar;
     private boolean mIsPrimary;
 
     @Override
@@ -123,13 +123,11 @@ public class SystemSettings extends SettingsPreferenceFragment {
 
         // Don't display the lock clock preference if its not installed
         removePreferenceIfPackageNotInstalled(findPreference(KEY_LOCK_CLOCK));
+
+        mRamBar = findPreference(KEY_RECENTS_RAM_BAR);
+        updateRamBar();
     }
 
-	mRamBar = (CheckBoxPreference) findPreference(KEY_RECENTS_RAM_BAR);
-        mRamBar.setChecked(Settings.System.getInt(
-                getActivity().getContentResolver(),
-                Settings.System.RECENTS_RAM_BAR, 0) == 1);
-                
     private void updateLightPulseDescription() {
         if (Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NOTIFICATION_LIGHT_PULSE, 0) == 1) {
@@ -148,9 +146,20 @@ public class SystemSettings extends SettingsPreferenceFragment {
         }
      }
 
+    private void updateRamBar() {
+        int ramBarMode = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.RECENTS_RAM_BAR_MODE, 0);
+        if (ramBarMode != 0)
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_enabled));
+        else
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_disabled));
+    }
+
+
     @Override
     public void onResume() {
         super.onResume();
+        updateRamBar();
 
         // All users
         updateLightPulseDescription();
@@ -162,20 +171,9 @@ public class SystemSettings extends SettingsPreferenceFragment {
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
-            Preference preference) {
-        if (preference == mRamBar) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.RECENTS_RAM_BAR,
-                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
-            return true;
-        }
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
-
-    @Override
     public void onPause() {
         super.onPause();
+        updateRamBar();
     }
 
     private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
