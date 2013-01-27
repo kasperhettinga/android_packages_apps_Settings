@@ -2381,7 +2381,7 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <!-- Recents Ram Bar -->
     <string name="ram_bar">Recente apps RAM-balk</string>
     <string name="ram_bar_note_title">Opgelet</string>
-    <string name="ram_bar_note_summary">Deze RAM-balk toont hoe android je beschikbare geheugen werkelijk gebruikt. Apps in de achtergrond of in de cache kunnen sneller opgestart worden</string>
+    <string name="ram_bar_note_summary">De RAM-balk toont het beschikbare geheugen (RAM) gebruikt wordt. Gecachte apps zijn sneller op te starten.</string>
     <string name="ram_bar_mode_title">Recente apps RAM-balk modus</string>
     <string name="ram_bar_mode_dialog_title">Toon RAM-balk in recente apps</string>
     <string name="ram_bar_none">Geen</string>
