@@ -1643,6 +1643,10 @@
                 android:resource="@id/sound_settings" />
         </activity>
 
+        <activity android:name=".cyanogenmod.Processor" />
+
+        <activity android:name=".cyanogenmod.IOScheduler" />
+
         <activity android:name=".profiles.ProfilesSettings" />
         <activity android:name="Settings$ProfilesSettingsActivity"
                 android:label="@string/profile_settings"
@@ -1748,6 +1752,28 @@
         </activity>
 
         <!-- CyanogenMod activities End -->
+
+        <!-- Pseudo-activity used to provide an intent-filter entry point to processor settings -->
+        <activity android:name="Settings$ProcessorSettings"
+                android:label="@string/processor_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cyanogenmod.Processor" />
+        </activity>
+
+        <!-- Pseudo-activity used to provide an intent-filter entry point to scheduler settings -->
+        <activity android:name="Settings$IOScheduler"
+                android:label="@string/io_scheds_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cyanogenmod.IOScheduler" />
+        </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
