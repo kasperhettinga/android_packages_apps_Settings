@@ -893,4 +893,6 @@ public class Settings extends PreferenceActivity
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
     public static class DreamSettingsActivity extends Settings { /* empty */ }
     public static class SystemSettingsActivity extends Settings { /* empty */ }
+    public static class ProcessorSettings extends Settings { /* empty */ }
+    public static class IOScheduler extends Settings { /* empty */ }
 }
