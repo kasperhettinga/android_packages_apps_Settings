@@ -62,7 +62,7 @@
     <string name="notification_convert_sound_to_vibration_title">Trillen bij melding</string>
     <string name="notification_convert_sound_to_vibration_summary">Trillen bij melding in trilstand, ongeacht de app-instelling</string>
     <string name="device_hostname">Hostnaam apparaat</string>
-    <string name="mod_version">CyanogenMod-versie</string>
+    <string name="mod_version">ROM-versie</string>
     <string name="mod_version_default">Onbekend</string>
     <string name="build_date">Build-datum</string>
     <string name="cpu_info">CPU</string>
