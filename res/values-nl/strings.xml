@@ -1894,12 +1894,12 @@
     <string name="system_settings_title">Systeem</string>
     <string name="system_interface_title">Systeemuiterlijk</string>
     <string name="notification_drawer_title">Meldingspaneel</string>
-    <string name="lock_screen_title">Vergrendelscherm</string>
+    <string name="lock_screen_title">Schermvergrendeling</string>
     <string name="lockscreen_target_info">Sleep de schijf naar een plaats om een snelkoppeling toe te wijzen</string>
     <string name="lockscreen_target_title">Snelkoppelingen</string>
-    <string name="lockscreen_target_summary">Snelkoppelingen op het vergrendelscherm beheren</string>
-    <string name="lockscreen_target_reset">Vergrendelschermsnelkoppelingen hersteld naar standaardwaarden</string>
-    <string name="lockscreen_target_save">Vergrendelschermsnelkoppelingen opgeslagen</string>
+    <string name="lockscreen_target_summary">Snelkoppelingen op vergrendelscherm beheren</string>
+    <string name="lockscreen_target_reset">Snelkoppelingen hersteld naar standaardwaarden</string>
+    <string name="lockscreen_target_save">Snelkoppelingen opgeslagen</string>
     <string name="lockscreen_target_reset_title">Herstellen</string>
     <string name="lockscreen_target_reset_message">Alle gemaakte snelkoppelingen verwijderen en standaardwaarden herstellen?</string>
     <string name="lockscreen_target_empty">Niet toegewezen</string>
@@ -1965,15 +1965,15 @@
     <string name="profile_choose_app">App kiezen</string>
     <string name="profile_settings_header">Profielinstellingen</string>
     <string name="profile_system_settings_title">Systeeminstellingen</string>
-    <string name="profile_lockmode_title">Vergrendelschermtype</string>
+    <string name="profile_lockmode_title">Type schermvergrendeling</string>
     <string name="profile_lockmode_default">Standaard</string>
     <string name="profile_lockmode_insecure">Onveilig</string>
     <string name="profile_lockmode_disabled">Uitgeschakeld</string>
     <string name="profile_lockmode_default_summary">Systeemstandaard gebruiken</string>
-    <string name="profile_lockmode_insecure_summary">Onveilig vergrendelscherm gebruiken</string>
-    <string name="profile_lockmode_disabled_summary">Vergrendelscherm uitgeschakeld</string>
+    <string name="profile_lockmode_insecure_summary">Onveilige schermvergrendeling gebruiken</string>
+    <string name="profile_lockmode_disabled_summary">Schermvergrendeling uitgeschakeld</string>
     <string name="profile_airplanemode_title">Vliegtuigmodus</string>
-    <string name="profile_disable_screen_lock_summary">Vergrendelschermbeveiliging uitschakelen bij dit profiel</string>
+    <string name="profile_disable_screen_lock_summary">Schermvergrendelingsbeveiliging uitschakelen bij dit profiel</string>
     <string name="vibrator_type_ringer">Oproepen</string>
     <string name="vibrator_type_notification">Meldingen</string>
     <string name="possibleButtons">Mogelijke knoppen</string>
@@ -1990,11 +1990,11 @@
     <string name="toggleScreenTimeout">Schermtime-out</string>
     <string name="toggleAirplane">Vliegtuigmodus</string>
     <string name="toggleFlashlight">Zaklamp</string>
-    <string name="toggleLockScreen">Vergrendelscherm</string>
+    <string name="toggleLockScreen">Schermvergrendeling</string>
     <string name="toggleWimax">WiMAX</string>
     <string name="screen_security_category">Schermbeveiliging</string>
-    <string name="screen_security_title">Vergrendelscherm</string>
-    <string name="screen_security_summary">Vergrendelschermbeveiliging en -vertragingen beheren</string>
+    <string name="screen_security_title">Schermvergrendeling</string>
+    <string name="screen_security_summary">Schermvergrendelingsbeveiliging en -vertragingen beheren</string>
     <string name="additional_options_title">Extra opties</string>
     <string name="unlock_menu_unlock_title">Menu-ontgrendeling</string>
     <string name="unlock_menu_unlock_summary">Ontgrendelen door op de menuknop te drukken</string>
@@ -2196,7 +2196,7 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="title_toggle_sync">Synchronisatie</string>
     <string name="title_toggle_wifiap">Draagbare Wi-Fi-hotspot</string>
     <string name="title_toggle_mobiledata">Mobiele gegevens</string>
-    <string name="title_toggle_lockscreen">Vergrendelscherm</string>
+    <string name="title_toggle_lockscreen">Schermvergrendeling</string>
     <string name="title_toggle_networkmode">Netwerkmodus</string>
     <string name="title_toggle_autorotate">Scherm automatisch draaien</string>
     <string name="title_toggle_airplane">Vliegtuigmodus</string>
@@ -2268,7 +2268,7 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="adb_over_network_summary">TCP/IP-foutopsporing inschakelen over netwerkinterfaces (Wi-Fi, USB-netwerken etc.). Wordt hersteld bij opstarten</string>
     <string name="adb_over_network_warning">Let op: als ADB over netwerk is ingeschakeld, kan op uw apparaat worden ingebroken via alle aangesloten netwerken, inclusief via uw GSM-gegevensnetwerk!\n\nGebruik deze functie alleen indien u verbonden bent met vertrouwde netwerken.\n\nWeet u zeker dat u deze functie wilt inschakelen?</string>
     <string name="lockscreen_buttons_title">Knopacties</string>
-    <string name="lockscreen_buttons_summary">Knopacties op vergrendelscherm beheren</string>
+    <string name="lockscreen_buttons_summary">Knopacties bij schermvergrendeling beheren</string>
     <string name="lockscreen_long_press_back_title">Terugknop lang ingedrukt</string>
     <string name="lockscreen_long_press_home_title">Thuisknop lang ingedrukt</string>
     <string name="lockscreen_long_press_menu_title">Menuknop lang ingedrukt</string>
@@ -2291,7 +2291,7 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="title_tile_sleep">Slaapstand</string>
     <string name="title_tile_gps">GPS</string>
     <string name="title_tile_torch">Zaklamp</string>
-    <string name="title_tile_lockscreen">Vergrendelscherm</string>
+    <string name="title_tile_lockscreen">Schermvergrendeling</string>
     <string name="title_tile_lte">LTE</string>
     <string name="title_tile_mobiledata">Mobiele gegevens</string>
     <string name="title_tile_profile">Profiel</string>
@@ -2335,7 +2335,7 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="pref_wifi_disable_hdcp_summary">Gebruiken indien verbonden, maar zonder uitvoer</string>
     <string name="app_security_title">App-beveiliging</string>
     <string name="sms_security_check_limit_title">Limiet sms-berichten</string>
-    <string name="sms_security_check_limit_summary">Melden wanneer apps te vaak sms-berichten verzenden. Huidig limiet: %d berichten in 15 minuten</string>
+    <string name="sms_security_check_limit_summary">Apps kunnen %d berichten versturen in 30 minuten zonder bevestiging</string>
     <string name="sms_security_check_limit_default">30 (standaard)</string>
     <string name="title_toggle_screentimeout">Schermtime-out</string>
     <string name="lock_clock_title">Klokwidget</string>
@@ -2343,7 +2343,7 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="stylus_icon_enabled_title">Pictogram bij stylusgebruik</string>
     <string name="stylus_icon_enabled_summary">Cursor tonen als een stylus wordt gebruikt</string>
     <string name="navigation_bar_title">Navigatiebalk</string>
-    <string name="navigation_bar_help_text">1 - Kies het vergrendelicoon om te beginnen\n\n2 - Kies een knop om een functie aan toe te wijzen of te wijzigen\n\n3 - Druk lang op een knop om de positie te wijzigen\n\n4 - Druk nogmaals op het vergrendelicoon om op te slaan\n\n5 - Druk op herstel om de standaardinstellingen te herstellen\n\n</string>
+    <string name="navigation_bar_help_text">1 - Kies het vergrendelingspictogram om te beginnen\n\n2 - Kies een knop om een functie aan toe te wijzen of te wijzigen\n\n3 - Raak een knop lang aan om de positie te wijzigen\n\n4 - Tik nogmaals op het vergrendelingspictogram om op te slaan\n\n5 - Tik op \'Herstellen\' om de standaardinstellingen te herstellen\n\n</string>
     <string name="navigation_bar_tips">&#8226; Acties kunnen slechts aan één knop worden toegewezen\n\n&#8226; De thuisknop kan niet opnieuw worden toegewezen\n\n&#8226; Randknoppen kunnen niet worden herschikt</string>
     <string name="navigation_bar_tips_title">Snelle tips</string>
     <string name="navigation_bar_reset_message">Huidige instellingen verwijderen en standaardinstellingen herstellen?</string>
@@ -2397,4 +2397,20 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="ram_bar_button_help">Help</string>
     <string name="ram_bar_button_reset">Reset kleuren</string>
 
+    <string name="bluetooth_mas_request">Verzoek tot berichtentoegang</string>
+    <string name="bluetooth_mas_acceptance_dialog_text">%1$s wil toegang tot uw berichten. Toegang toestaan aan %2$s?</string>
+    <string name="bluetooth_mas_remember_choice">Niet meer vragen</string>
+    <string name="wifi_setting_priority_title">Wi-Fi-prioriteit</string>
+    <string name="wifi_setting_priority_summary">Prioriteit instellen van Wi-Fi-netwerken</string>
+    <string name="notification_convert_sound_to_vibration_title">Trillen bij melding</string>
+    <string name="notification_convert_sound_to_vibration_summary">Apparaat laten trillen bij melding in trilstand, ongeacht de app-instelling</string>
+    <string name="usb_mass_storage_title">Massaopslag</string>
+    <string name="usb_mass_storage_summary">USB-massaopslag inschakelen</string>
+    <string name="lockscreen_custom_background_title">Achtergrond</string>
+    <string name="lockscreen_custom_background_dialog_title">Kies een kleur</string>
+    <string name="lockscreen_background_result_successful">Achtergrond succesvol gewijzigd</string>
+    <string name="lockscreen_background_result_not_successful">Kan achtergrond niet wijzigen</string>
+    <string name="lockscreen_background_color_fill">Vullen met een kleur</string>
+    <string name="lockscreen_background_custom_image">Aangepaste afbeelding</string>
+    <string name="lockscreen_background_default_wallpaper">Standaardachtergrond</string>
 </resources>
