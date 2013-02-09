@@ -380,7 +380,7 @@
     <string name="power_menu_sound_title">Äänipaneeli</string>
     <string name="cmupdate_settings_title">CyanogenMod-päivitykset</string>
     <string name="cmupdate_settings_summary">Tarkista, katso tai asenna saatavilla olevat päivitykset</string>
-    <string name="advanced_settings_title">Lisäasetukset</string>
+    <string name="advanced_settings_title">Mackay-asetukset</string>
     <string name="ime_switcher_notify">Syöttötavan ilmoitus</string>
     <string name="ime_switcher_notify_summary">Näytä käytettävä syöttötapa ilmoituksissa</string>
     <string name="status_bar_title">Tilapalkki</string>

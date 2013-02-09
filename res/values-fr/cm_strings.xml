@@ -396,7 +396,7 @@
     <string name="power_menu_sound_title">Son et vibreur</string>
     <string name="cmupdate_settings_title">Mises à jour CyanogenMod</string>
     <string name="cmupdate_settings_summary">Vérifier, afficher ou installer les mises à jour disponibles</string>
-    <string name="advanced_settings_title">Paramètres avancés</string>
+    <string name="advanced_settings_title">Paramètres Mackay</string>
     <string name="ime_switcher_notify">Icône méthode de saisie</string>
     <string name="ime_switcher_notify_summary">Afficher l\'icône de la méthode de saisie dans la barre de notification</string>
     <string name="status_bar_title">Barre d\'état</string>
