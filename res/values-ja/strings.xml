@@ -1966,7 +1966,7 @@
     <string name="pulse_speed_very_slow">とても遅い</string>
 
     <!-- Advanced, Device specific (DeviceParts) settings #CM -->
-    <string name="advanced_settings_title">アドバンスド</string>
+    <string name="advanced_settings_title">Mackay 設定</string>
 
     <!-- INTERFACE Settings #CM -->
     <!-- Settings main menu category heading. Interface (Launcher, Themes, System). [CHAR LIMIT=40] -->

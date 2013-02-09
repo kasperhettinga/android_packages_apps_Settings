@@ -2412,7 +2412,7 @@
     <string name="cmupdate_settings_summary">检查, 查看, 或安装可用的更新</string>
 
     <!-- Advanced, Device specific (DeviceParts) settings  -->
-    <string name="advanced_settings_title">高级</string>
+    <string name="advanced_settings_title">Mackay 设置</string>
 
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">输入法通知</string>

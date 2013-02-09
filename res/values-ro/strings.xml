@@ -2276,7 +2276,7 @@
     <string name="cmupdate_settings_title">"Actualizări CyanogenMod"</string>
     <string name="cmupdate_settings_summary">"Verificaţi actualizări disponibile"</string>
 
-    <string name="advanced_settings_title">"Avansat"</string>
+    <string name="advanced_settings_title">"Mackay setări"</string>
 
     <string name="ime_switcher_notify">"Selector notificare"</string>
     <string name="ime_switcher_notify_summary">"Arătați notificarea pentru selectorul metodelor de intrare"</string>

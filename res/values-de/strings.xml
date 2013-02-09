@@ -2382,7 +2382,7 @@
     <string name="cmupdate_settings_summary">Auf neue Versionen prüfen und diese installieren</string>
 
     <!-- Advanced - Device specific settings -->
-    <string name="advanced_settings_title">Erweitert</string>
+    <string name="advanced_settings_title">Mackay-Einstellungen</string>
 
     <!-- IME switcher notifcation -->
     <string name="ime_switcher_notify">Auswahl-Benachrichtigung</string>

@@ -2362,7 +2362,7 @@
     <string name="cmupdate_settings_summary">Tjek for, se eller installér tilgængelige opdateringer</string>
 
     <!-- Advanced, Device specific (DeviceParts) settings -->
-    <string name="advanced_settings_title">Avanceret</string>
+    <string name="advanced_settings_title">Mackay indstillinger</string>
 
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">IME-vælgenotifikation</string>
