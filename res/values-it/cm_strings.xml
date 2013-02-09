@@ -389,7 +389,7 @@
     <string name="power_menu_sound_title">Pannello suoni</string>
     <string name="cmupdate_settings_title">Aggiornamento CyanogenMod</string>
     <string name="cmupdate_settings_summary">Controlla visualizza e installa gli aggiornamenti disponibili</string>
-    <string name="advanced_settings_title">Avanzate</string>
+    <string name="advanced_settings_title">Mackay impostazioni</string>
     <string name="ime_switcher_notify">Notifica metodo inserimento</string>
     <string name="ime_switcher_notify_summary">Visualizza la notifica del selettore metodo di immissione</string>
     <string name="status_bar_title">Barra di stato</string>
