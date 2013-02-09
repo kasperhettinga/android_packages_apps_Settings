@@ -408,7 +408,7 @@
     <string name="power_menu_sound_title">Πάνελ έντασης</string>
     <string name="cmupdate_settings_title">Ενημερώσεις CyanogenMod</string>
     <string name="cmupdate_settings_summary">Έλεγχος και εγκατάσταση διαθέσιμων ενημερώσεων</string>
-    <string name="advanced_settings_title">Για προχωρημένους</string>
+    <string name="advanced_settings_title">Mackay Ρυθμίσεις</string>
     <string name="ime_switcher_notify">Ειδοποίηση επιλογέα</string>
     <string name="ime_switcher_notify_summary">Εμφάνιση ειδοποίησης για τον επιλογέα μεθόδου εισαγωγής</string>
     <string name="status_bar_title">Μπάρα κατάστασης</string>

@@ -122,9 +122,9 @@
     <string name="pulse_speed_normal">ノーマル</string>
     <string name="pulse_speed_slow">遅い</string>
     <string name="pulse_speed_very_slow">とても遅い</string>
-    <string name="advanced_settings_title">アドバンスド</string>
     <string name="header_category_interface">個人設定</string>
     <string name="homescreen_settings_title">ホーム画面</string>
+    <string name="advanced_settings_title">Mackay 設定</string>
     <string name="themes_settings_title">テーマ</string>
     <string name="system_settings_title">インタフェース</string>
     <string name="system_interface_title">システムインタフェース</string>

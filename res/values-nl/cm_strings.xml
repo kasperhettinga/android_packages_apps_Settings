@@ -391,7 +391,7 @@ Let op:\nAangezien het beginvolume hoger is ingesteld dan het beltoonvolume, wor
     <string name="power_menu_sound_title">Geluidspaneel</string>
     <string name="cmupdate_settings_title">CyanogenMod-updates</string>
     <string name="cmupdate_settings_summary">Controleren op updates</string>
-    <string name="advanced_settings_title">Geavanceerd</string>
+    <string name="advanced_settings_title">Mackay instellingen</string>
     <string name="ime_switcher_notify">Invoermethodemelding</string>
     <string name="ime_switcher_notify_summary">Melding tonen voor wijzigen invoermethode</string>
     <string name="status_bar_title">Statusbalk</string>

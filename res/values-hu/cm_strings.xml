@@ -404,7 +404,7 @@
     <string name="power_menu_sound_title">Hang mód</string>
     <string name="cmupdate_settings_title">CyanogenMod frissítések</string>
     <string name="cmupdate_settings_summary">Elérhető frissítések keresése, megtekintése, vagy telepítése</string>
-    <string name="advanced_settings_title">Haladó</string>
+    <string name="advanced_settings_title">Mackay beállítások</string>
     <string name="ime_switcher_notify">Beviteli mód választó</string>
     <string name="ime_switcher_notify_summary">Beviteli mód választó megjelenítése az értesítési sávon</string>
     <string name="status_bar_title">Értesítési sáv</string>

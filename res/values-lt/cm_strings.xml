@@ -318,7 +318,7 @@
     <string name="power_menu_sound_title">Garso panelė</string>
     <string name="cmupdate_settings_title">CyanogenMod atnaujinimai</string>
     <string name="cmupdate_settings_summary">Tikrinti, žiūrėti ar įdiegti atnaujinimus</string>
-    <string name="advanced_settings_title">Išplėstinis</string>
+    <string name="advanced_settings_title">Mackay nustatymai</string>
     <string name="ime_switcher_notify">Pasirinkimo įspėjimas</string>
     <string name="ime_switcher_notify_summary">Rodyti įvesties metodo pasirinkimo įspėjimą</string>
     <string name="status_bar_title">Būsenos juosta</string>
