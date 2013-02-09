@@ -313,7 +313,7 @@
     <string name="power_menu_airplane_title">Modo avião</string>
     <string name="cmupdate_settings_title">Atualizações CyanogenMod</string>
     <string name="cmupdate_settings_summary">Verificar, visualizar ou instalar atualizações disponíveis</string>
-    <string name="advanced_settings_title">Avançado</string>
+    <string name="advanced_settings_title">Mackay configurações</string>
     <string name="ime_switcher_notify">Notificação do método de entrada</string>
     <string name="ime_switcher_notify_summary">Exibir notificação do seletor de método de entrada</string>
     <string name="status_bar_title">Barra de status</string>

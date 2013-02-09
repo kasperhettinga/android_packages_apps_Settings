@@ -384,7 +384,7 @@
     <string name="power_menu_sound_title">声控面板</string>
     <string name="cmupdate_settings_title">CyanogenMod 更新</string>
     <string name="cmupdate_settings_summary">检查、查看或安装可用的更新</string>
-    <string name="advanced_settings_title">高级</string>
+    <string name="advanced_settings_title">Mackay 设置</string>
     <string name="ime_switcher_notify">输入法通知</string>
     <string name="ime_switcher_notify_summary">显示选择输入法的通知</string>
     <string name="status_bar_title">状态栏</string>

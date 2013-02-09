@@ -395,7 +395,7 @@
     <string name="power_menu_sound_title">Lydpanel</string>
     <string name="cmupdate_settings_title">CyanogenMod-opdateringer</string>
     <string name="cmupdate_settings_summary">Tjek for, se eller installér tilgængelige opdateringer</string>
-    <string name="advanced_settings_title">Avanceret</string>
+    <string name="advanced_settings_title">Mackay indstillinger</string>
     <string name="ime_switcher_notify">IME-vælgemeddelelse</string>
     <string name="ime_switcher_notify_summary">Vis vælgemeddelelse for inputmetode</string>
     <string name="status_bar_title">Statuslinje</string>
