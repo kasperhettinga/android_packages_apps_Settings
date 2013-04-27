@@ -49,6 +49,7 @@ public class PowerWidgetUtil {
     public static final String BUTTON_AUTOROTATE = "toggleAutoRotate";
     public static final String BUTTON_AIRPLANE = "toggleAirplane";
     public static final String BUTTON_FLASHLIGHT = "toggleFlashlight";
+    public static final String BUTTON_FCHARGE = "toggleFCharge";
     public static final String BUTTON_SLEEP = "toggleSleepMode";
     public static final String BUTTON_MEDIA_PLAY_PAUSE = "toggleMediaPlayPause";
     public static final String BUTTON_MEDIA_PREVIOUS = "toggleMediaPrevious";
@@ -73,6 +74,9 @@ public class PowerWidgetUtil {
         BUTTONS.put(BUTTON_FLASHLIGHT, new PowerWidgetUtil.ButtonInfo(
                 BUTTON_FLASHLIGHT, R.string.title_toggle_flashlight,
                 "com.android.systemui:drawable/stat_flashlight_on"));
+        BUTTONS.put(BUTTON_FCHARGE, new PowerWidgetUtil.ButtonInfo(
+                BUTTON_FCHARGE, R.string.title_toggle_fcharge,
+                "com.android.systemui:drawable/toggle_fcharge"));
         BUTTONS.put(BUTTON_GPS, new PowerWidgetUtil.ButtonInfo(
                 BUTTON_GPS, R.string.title_toggle_gps, "com.android.systemui:drawable/stat_gps_on"));
         BUTTONS.put(BUTTON_LOCKSCREEN, new PowerWidgetUtil.ButtonInfo(
