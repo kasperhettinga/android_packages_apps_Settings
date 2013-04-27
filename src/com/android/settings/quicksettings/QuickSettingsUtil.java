@@ -32,6 +32,7 @@ import static com.android.internal.util.cm.QSConstants.TILE_MOBILEDATA;
 import static com.android.internal.util.cm.QSConstants.TILE_NETWORKADB;
 import static com.android.internal.util.cm.QSConstants.TILE_NETWORKMODE;
 import static com.android.internal.util.cm.QSConstants.TILE_NFC;
+import static com.android.internal.util.cm.QSConstants.TILE_FCHARGE;
 import static com.android.internal.util.cm.QSConstants.TILE_PROFILE;
 import static com.android.internal.util.cm.QSConstants.TILE_PERFORMANCE_PROFILE;
 import static com.android.internal.util.cm.QSConstants.TILE_QUIETHOURS;
@@ -56,6 +57,7 @@ import com.android.internal.telephony.Phone;
 import com.android.internal.util.cm.QSUtils;
 import com.android.settings.R;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -69,6 +71,9 @@ public class QuickSettingsUtil {
 
     private static final Map<String, TileInfo> ENABLED_TILES = new HashMap<String, TileInfo>();
     private static final Map<String, TileInfo> DISABLED_TILES = new HashMap<String, TileInfo>();
+
+    public static final String FAST_CHARGE_DIR = "/sys/kernel/fast_charge";
+    public static final String FAST_CHARGE_FILE = "force_fast_charge";
 
     static {
         TILES = Collections.unmodifiableMap(ENABLED_TILES);
@@ -111,6 +116,9 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_NFC, R.string.title_tile_nfc,
                 "com.android.systemui:drawable/ic_qs_nfc_on"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_FCHARGE, R.string.title_tile_fcharge,
+                "com.android.systemui:drawable/ic_qs_fcharge_off"));
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_AUTOROTATE, R.string.title_tile_autorotate,
                 "com.android.systemui:drawable/ic_qs_auto_rotate"));
@@ -198,6 +206,12 @@ public class QuickSettingsUtil {
         // Don't show the LTE tile if not supported
         if (!QSUtils.deviceSupportsLte(context)) {
             removeTile(TILE_LTE);
+        }
+
+        // Dont show fast charge option if not supported
+        File fastcharge = new File(FAST_CHARGE_DIR, FAST_CHARGE_FILE);
+        if (!fastcharge.exists()) {
+            removeTile(TILE_FCHARGE);
         }
 
         // Don't show the Torch tile if not supported
