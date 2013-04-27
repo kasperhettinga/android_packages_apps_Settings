@@ -15,6 +15,7 @@
      limitations under the License.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="title_tile_fcharge">Snelladen</string>
     <string name="font_size_preview_text">Pa\'s wijze lynx bezag vroom het fikse aquaduct.</string>
     <string name="default_date_format"><xliff:g id="default_date_format">dd/MM/yyyy</xliff:g></string>
     <string name="intent_sender_data_label"><xliff:g id="data">Gegevens:</xliff:g></string>
