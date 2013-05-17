@@ -1024,6 +1024,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="2614673439060830433">"U tekent als volgt een ontgrendelingspatroon"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts_header" msgid="819903817323783498">"Te veel onjuiste pogingen!"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts_footer" msgid="6759029360597122873">"Probeer het over <xliff:g id="NUMBER">%d</xliff:g> seconden opnieuw."</string>
+    <string name="lock_clock_title">Klokwidget</string>
+    <string name="lock_clock_summary">Weergave beheren van \'cLock\'</string>
     <string name="activity_not_found" msgid="5551664692991605325">"Deze app is niet geïnstalleerd op uw telefoon."</string>
     <string name="manageapplications_settings_title" msgid="7041951105633616745">"Apps beheren"</string>
     <string name="manageapplications_settings_summary" msgid="1794401500935451259">"Geïnstalleerde apps beheren en verwijderen"</string>

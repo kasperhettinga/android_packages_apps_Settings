@@ -55,6 +55,7 @@ public class Lockscreen extends SettingsPreferenceFragment
     private static final String KEY_SEE_TRHOUGH = "see_through";
     private static final String KEY_HOME_SCREEN_WIDGETS = "home_screen_widgets";
     private static final String KEY_MAXIMIZE_WIDGETS = "maximize_widgets";
+    private static final String KEY_LOCK_CLOCK = "lock_clock";
     private static final String KEY_VOLBTN_MUSIC_CTRL = "music_controls";
     private static final String KEY_VOLUME_WAKE = "volume_wake";
     private static final String KEY_BACKGROUND_PREF = "lockscreen_background";
