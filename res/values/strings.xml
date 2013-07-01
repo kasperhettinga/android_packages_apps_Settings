@@ -2584,7 +2584,7 @@
     <!-- Applications settings screen, setting check box summary. This is the summary for "App Check" checkbox. [CHAR LIMIT=none] -->
     <string name="verify_applications_summary">Disallow or warn before installation of apps that may cause harm</string>
     <!-- Applications settings screen, setting check box title. If checked, applications show more settings options. -->
-    <string name="advanced_settings">Advanced settings</string>
+    <string name="advanced_settings">Mackay settings</string>
     <!-- Applications settings screen, setting check box summary.  This is the summary for "Advanced settings" checkbox  -->
     <string name="advanced_settings_summary">Enable more settings options</string>
     <!-- Manage applications, individual application info screen title. For example, if they click on "Browser" in "Manage applications", the title of the next screen will be this -->
