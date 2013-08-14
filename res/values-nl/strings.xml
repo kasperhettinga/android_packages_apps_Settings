@@ -1902,4 +1902,25 @@
     <string name="user_image_take_photo" msgid="1280274310152803669">"Foto maken"</string>
     <string name="user_image_choose_photo" msgid="7940990613897477057">"Foto kiezen in Galerij"</string>
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+
+    <!-- MACKAYROM EDITS -->
+
+    <!-- Recents Ram Bar -->
+    <string name="ram_bar">Recente apps RAM-balk</string>
+    <string name="ram_bar_note_title">Opgelet</string>
+    <string name="ram_bar_note_summary">De RAM-balk toont het beschikbare geheugen (RAM) gebruikt wordt. Gecachte apps zijn sneller op te starten.</string>
+    <string name="ram_bar_mode_title">Recente apps RAM-balk modus</string>
+    <string name="ram_bar_mode_dialog_title">Toon RAM-balk in recente apps</string>
+    <string name="ram_bar_none">Geen</string>
+    <string name="ram_bar_apps">Apps</string>
+    <string name="ram_bar_cache">Apps en cache</string>
+    <string name="ram_bar_other">Apps, cache en overige</string>
+    <string name="ram_bar_style_cat">RAM-balk stijl</string>
+    <string name="ram_bar_color_app_mem_color">Apps RAM kleur</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM kleur</string>
+    <string name="ram_bar_color_total_mem_color">Overige RAM kleur</string>
+    <string name="ram_bar_color_enabled">Ingeschakeld</string>
+    <string name="ram_bar_color_disabled">Uitgeschakeld</string>
+    <string name="ram_bar_button_help">Help</string>
+    <string name="ram_bar_button_reset">Reset kleuren</string>
 </resources>
