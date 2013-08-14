@@ -1711,6 +1711,8 @@
 
         <activity android:name=".cyanogenmod.MoreDeviceSettings" />
 
+        <activity android:name=".cyanogenmod.RamBar" />
+
         <!-- "Blacklist settings" UI, used only on voice-capable phone devices. -->
         <activity android:name="Settings$BlacklistSettingsActivity"
                 android:theme="@android:style/Theme.Holo.DialogWhenLarge"
@@ -1775,13 +1777,24 @@
                 android:value="com.android.settings.cyanogenmod.IOScheduler" />
         </activity>
 
+        <!-- Pseudo-activity used to provide an intent-filter entry point to ass display rotation config -->
+        <activity android:name="Settings$ASSRamBarActivity"
+                android:label="@string/ram_bar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cyanogenmod.RamBar" />
+        </activity>
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
                 android:label="@string/crypt_keeper_encrypt_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.app.action.START_ENCRYPTION" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.CryptKeeperSettings" />
