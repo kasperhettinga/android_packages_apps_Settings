@@ -640,6 +640,8 @@
     <string name="status_bar_battery_status_circle_percentage">Circle with percentage</string>
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+    <string name="status_bar_swipe_show_title">Swipe to show</string>
+    <string name="status_bar_swipe_show_summary">Swipe down from the top of the screen to show status bar in fullscreen apps</string>
 
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
