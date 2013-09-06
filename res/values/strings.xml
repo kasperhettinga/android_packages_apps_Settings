@@ -1257,6 +1257,8 @@
     <string name="wifi_setup_wps">Automatic setup (WPS)</string>
 
     <!-- Dialog for Access Points --> <skip />
+    <!-- Label for automatically_connect -->
+    <string name="wifi_auto_connect">Automatically Connect</string>
     <!-- Label to show/hide advanced options -->
     <string name="wifi_show_advanced">Show advanced options</string>
     <!-- Title for the WPS setup dialog [CHAR LIMIT=50] -->
@@ -4200,6 +4202,10 @@
     <string name="start_time_title">Start</string>
     <string name="end_time_title">End</string>
 
+    <!-- Dsp manager -->
+    <string name="dsp_title">DSP Manager</string>
+    <string name="dsp_summary">Adjust system wide audio parameters</string>
+
     <!-- Safe headset volume restore checkbox -->
     <string name="safe_headset_restore_title">Safe headset volume</string>
     <string name="safe_headset_restore_summary">Prevent loud volume levels when headset is first plugged in</string>
@@ -4315,7 +4321,14 @@
     <string name="combined_bar_auto_hide_summary">Allow combined bar to hide when showing a fullscreen app</string>
 
     <!-- Navigation Bar  -->
+    <string name="combined_navigation_bar_title">@string/navigation_bar_title</string>
     <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_show">Show Navigation Bar</string>
+    <string name="hw_keys_title">Hardware Keys</string>
+    <string name="key_menu_enabled">Menu Key Enabled</string>
+    <string name="key_back_enabled">Back Key Enabled</string>
+    <string name="key_home_enabled">Home Key Enabled</string>
+    <string name="navigation_bar_reboot_message">Reboot required</string>
 
     <string name="navigation_bar_help_text">1 - To begin editing, tap the lock icon\n\n2 - Tap any button to assign or change functionality\n\n3 - Long press any button to rearrange the order\n\n4 - To save, tap the lock icon again\n\n5 - To restore system default, tap the reset button\n\n</string>
     <string name="navigation_bar_tips">&#8226; Actions can only be assigned to one button at a time\n\n&#8226; The home button cannot be re-assigned\n\n&#8226; Side buttons cannot be rearranged</string>
@@ -4398,7 +4411,7 @@
     <!-- Status bar  -->
     <string name="combined_status_bar_title">@string/status_bar_title</string>
     <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_clock_title">Clock</string>
+    <string name="status_bar_clock_title">Clock style</string>
     <string name="status_bar_general_title">General</string>
     <string name="status_bar_show_clock_title">Show clock</string>
     <string name="status_bar_am_pm_title">AM/PM style</string>
@@ -4736,30 +4749,6 @@
     <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
     <string name="donate_settings_summary">""</string>
 
-    <!-- Anonymous Statistics  -->
-    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">CyanogenMod statistics</string>
-    <string name="anonymous_statistics_summary">Help make CyanogenMod better by opting into anonymous statistics reporting</string>
-    <string name="anonymous_statistics_warning_title">About</string>
-    <string name="anonymous_statistics_warning">Opting into CyanogenMod statistics will allow non-personal data to be submitted to the
-        developers of CyanogenMod to track unique installations across devices. The information submitted includes an unique identifier,
-        which does not compromise your privacy or personal data. The data is submitted during each boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
-    <string name="enable_reporting_title">Enable reporting</string>
-    <string name="preview_data_title">Preview data</string>
-    <string name="preview_data_summary">%s</string>
-    <string name="view_stats_title">View stats</string>
-    <string name="anonymous_learn_more">Learn more</string>
-
-    <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">Enable or Disable CyanogenMod statistics</string>
-
-    <!-- Anonymous Statistics - Preview -->
-    <string name="preview_id_title">Unique ID</string>
-    <string name="preview_device_title">Device</string>
-    <string name="preview_version_title">Version</string>
-    <string name="preview_country_title">Country</string>
-    <string name="preview_carrier_title">Carrier</string>
-
     <!-- Display : Rotation  -->
     <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_enabled">Enabled.</string>
@@ -4873,6 +4862,11 @@
     <string name="display_category_wakeup_options_title">Wakeup options</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
+
+    <!-- High End Gfx Effects -->
+    <string name="display_category_advanced_title">Advanced</string>
+    <string name="high_end_gfx_title">High end graphic effects</string>
+    <string name="high_end_gfx_summary">Enable graphic effects disabled on lower end devices</string>
 
     <string name="ok">OK</string>
 
