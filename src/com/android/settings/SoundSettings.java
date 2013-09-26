@@ -84,6 +84,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_RINGTONE = "ringtone";
     private static final String KEY_NOTIFICATION_SOUND = "notification_sound";
     private static final String KEY_CATEGORY_CALLS = "category_calls_and_notification";
+    private static final String KEY_HEADSET_CONNECT_PLAYER = "headset_connect_player";
     private static final String KEY_DOCK_CATEGORY = "dock_category";
     private static final String KEY_DOCK_AUDIO_SETTINGS = "dock_audio";
     private static final String KEY_DOCK_SOUNDS = "dock_sounds";
@@ -127,6 +128,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private Runnable mRingtoneLookupRunnable;
 
     private AudioManager mAudioManager;
+
+    private CheckBoxPreference mHeadsetConnectPlayer;
 
     private Preference mDockAudioSettings;
     private CheckBoxPreference mDockSounds;
@@ -268,6 +271,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 }
             }
         };
+
+        mHeadsetConnectPlayer = (CheckBoxPreference) findPreference(KEY_HEADSET_CONNECT_PLAYER);
+        mHeadsetConnectPlayer.setChecked(Settings.System.getInt(resolver,
+                Settings.System.HEADSET_CONNECT_PLAYER, 0) != 0);
 
         initDockSettings();
 
@@ -436,6 +443,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                     super.onPreferenceTreeClick(ps, ps);
                 }
             }
+
+        } else if (preference == mHeadsetConnectPlayer) {
+            Settings.System.putInt(getContentResolver(), Settings.System.HEADSET_CONNECT_PLAYER,
+                    mHeadsetConnectPlayer.isChecked() ? 1 : 0);
 
         } else if (preference == mDockSounds) {
             Settings.Global.putInt(getContentResolver(), Settings.Global.DOCK_SOUNDS_ENABLED,
