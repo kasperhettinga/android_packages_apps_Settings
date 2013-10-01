@@ -641,6 +641,8 @@
     <string name="status_bar_notif_count_summary">Display number of pending notifications</string>
     <string name="status_bar_swipe_show_title">Swipe to show</string>
     <string name="status_bar_swipe_show_summary">Swipe down from the top of the screen to show status bar in fullscreen apps</string>
+    <string name="status_bar_unhide_title">Status bar unhide</string>
+    <string name="status_bar_unhide_summary">Status bar unhide</string>
 
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
