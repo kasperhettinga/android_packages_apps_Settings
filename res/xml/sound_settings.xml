@@ -101,6 +101,15 @@
             android:entries="@array/emergency_tone_entries"
             android:entryValues="@array/emergency_tone_values" />
 
+    <PreferenceCategory
+        android:title="@string/headset_category_title" >
+        <CheckBoxPreference
+            android:key="headset_connect_player"
+            android:title="@string/headset_connect_player_title"
+            android:summary="@string/headset_connect_player_summary"
+            android:persistent="false" />
+    </PreferenceCategory>
+
     <!-- Dock -->
     <PreferenceCategory
         android:key="dock_category"
