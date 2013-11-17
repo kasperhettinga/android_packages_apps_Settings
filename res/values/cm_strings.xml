@@ -14,6 +14,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="advanced_settings_title">Mackay settings</string>
+
     <!-- Fast Charge -->
     <string name="title_tile_fcharge">Fast charge</string>
 
