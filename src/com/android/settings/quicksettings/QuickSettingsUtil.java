@@ -37,6 +37,7 @@ import static com.android.internal.util.cm.QSConstants.TILE_PROFILE;
 import static com.android.internal.util.cm.QSConstants.TILE_PERFORMANCE_PROFILE;
 import static com.android.internal.util.cm.QSConstants.TILE_QUIETHOURS;
 import static com.android.internal.util.cm.QSConstants.TILE_RINGER;
+import static com.android.internal.util.cm.QSConstants.TILE_S2W;
 import static com.android.internal.util.cm.QSConstants.TILE_SCREENTIMEOUT;
 import static com.android.internal.util.cm.QSConstants.TILE_SETTINGS;
 import static com.android.internal.util.cm.QSConstants.TILE_SLEEP;
@@ -74,6 +75,9 @@ public class QuickSettingsUtil {
 
     public static final String FAST_CHARGE_DIR = "/sys/kernel/fast_charge";
     public static final String FAST_CHARGE_FILE = "force_fast_charge";
+
+    public static final String S2W_DIR = "/sys/android_touch";
+    public static final String S2W_FILE = "sweep2wake";
 
     static {
         TILES = Collections.unmodifiableMap(ENABLED_TILES);
@@ -131,6 +135,9 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_QUIETHOURS, R.string.title_tile_quiet_hours,
                 "com.android.systemui:drawable/ic_qs_quiet_hours_on"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_S2W, R.string.title_tile_s2w,
+                "com.android.systemui:drawable/ic_qs_s2w_on"));
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_SCREENTIMEOUT, R.string.title_tile_screen_timeout,
                 "com.android.systemui:drawable/ic_qs_screen_timeout_on"));
@@ -212,6 +219,12 @@ public class QuickSettingsUtil {
         File fastcharge = new File(FAST_CHARGE_DIR, FAST_CHARGE_FILE);
         if (!fastcharge.exists()) {
             removeTile(TILE_FCHARGE);
+        }
+
+        // Dont show sleep2wake option if not supported
+        File s2w = new File(S2W_DIR, S2W_FILE);
+        if (!s2w.exists()) {
+            removeTile(TILE_S2W);
         }
 
         // Don't show the Torch tile if not supported

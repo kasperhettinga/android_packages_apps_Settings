@@ -19,6 +19,9 @@
     <!-- Fast Charge -->
     <string name="title_tile_fcharge">Fast charge</string>
 
+    <!-- Fast Charge -->
+    <string name="title_tile_s2w">Sweep2Wake</string>
+
     <!-- Sound settings screen -->
     <string name="ring_mode_title">Ring mode</string>
     <string name="ring_mode_normal">Normal</string>
