@@ -65,7 +65,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String KEY_ADAPTIVE_BACKLIGHT = "adaptive_backlight";
-    private static final String KEY_ADVANCED_DISPLAY_SETTINGS = "advanced_display_settings";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
 
     private static final String CATEGORY_LIGHTS = "lights_prefs";
@@ -153,9 +152,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mTapToWake = null;
         }
 
-
-        Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
-                getPreferenceScreen(), KEY_ADVANCED_DISPLAY_SETTINGS);
 
         mWakeWhenPluggedOrUnplugged =
                 (CheckBoxPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
