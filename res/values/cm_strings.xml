@@ -974,6 +974,16 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="settings_cmlicense_activity_title">CyanogenMod Legal</string>
     <string name="settings_cmlicense_activity_unreachable">You don\'t have a data connection. To view this information now, go to %s from any computer connected to the Internet.</string>
 
+    <!-- Advanced storage settings-->
+    <string name="storage_title_advanced">Advanced storage settings</string>
+    <string name="storage_menu_advanced">Advanced storage settings</string>
+    <string name="as_primary_storage_category">Primary storage</string>
+    <string name="as_sys_swap_title">Swap system vold primary</string>
+    <string name="as_sys_swap_summary">Change primary storage by swapping sdcard0 and sdcard1 during vold initialization</string>
+    <string name="as_swap_unavailable">No suitable storage pair was found for primary swap</string>
+    <string name="as_swap_reboot_prompt_title">Reboot required</string>
+    <string name="as_swap_reboot_prompt_message">In order to apply the new storage configuration, a reboot is required.\n\nDo you want to reboot now?</string>
+
     <!-- Stylus Icon -->
     <string name="stylus_icon_enabled_title">Show icon when using stylus</string>
     <string name="stylus_icon_enabled_summary">Show the pointer icon when hovering or drawing with the stylus</string>

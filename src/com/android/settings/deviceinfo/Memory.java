@@ -42,6 +42,7 @@ import android.os.storage.StorageVolume;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -179,6 +180,12 @@ public class Memory extends SettingsPreferenceFragment {
         UserManager um = (UserManager)getActivity().getSystemService(Context.USER_SERVICE);
         boolean usbItemVisible = !um.hasUserRestriction(UserManager.DISALLOW_USB_FILE_TRANSFER);
         usb.setVisible(usbItemVisible);
+
+        final MenuItem advStorage = menu.findItem(R.id.storage_advanced);
+        String secondaryPath = System.getenv("SECONDARY_STORAGE");
+        boolean advStorageItemVisibleSec = TextUtils.equals(secondaryPath, "/storage/sdcard1");
+        boolean advStorageItemVisibleEmu = !Environment.isExternalStorageEmulated();
+        advStorage.setVisible(advStorageItemVisibleSec && advStorageItemVisibleEmu);
     }
 
     @Override
@@ -193,6 +200,17 @@ public class Memory extends SettingsPreferenceFragment {
                             this, 0);
                 } else {
                     startFragment(this, UsbSettings.class.getCanonicalName(), -1, null);
+                }
+                return true;
+            case R.id.storage_advanced:
+                if (getActivity() instanceof PreferenceActivity) {
+                    ((PreferenceActivity) getActivity()).startPreferencePanel(
+                            AdvancedStorageSettings.class.getCanonicalName(),
+                            null,
+                            R.string.storage_title_advanced, null,
+                            this, 0);
+                } else {
+                    startFragment(this, AdvancedStorageSettings.class.getCanonicalName(), -1, null);
                 }
                 return true;
         }
