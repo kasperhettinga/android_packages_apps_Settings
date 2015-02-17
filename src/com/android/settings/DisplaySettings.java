@@ -49,7 +49,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.os.SystemProperties;
-import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
@@ -81,8 +80,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     /** If there is no setting in the provider, use this. */
     private static final int FALLBACK_SCREEN_TIMEOUT_VALUE = 30000;
 
-    private static final String PROP_DISPLAY_DENSITY = "persist.sf.lcd_density";
-
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_SCREEN_SAVER = "screensaver";
@@ -92,7 +89,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_ADAPTIVE_BACKLIGHT = "adaptive_backlight";
     private static final String KEY_SUNLIGHT_ENHANCEMENT = "sunlight_enhancement";
     private static final String KEY_COLOR_ENHANCEMENT = "color_enhancement";
-    private static final String KEY_DISPLAY_DENSITY = "display_density";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
@@ -115,7 +111,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mDozePreference;
     private SwitchPreference mAutoBrightnessPreference;
-    private EditTextPreference mDisplayDensity;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
 
     private SwitchPreference mAdaptiveBacklight;
@@ -550,33 +545,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mDozePreference) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), DOZE_ENABLED, value ? 1 : 0);
-        }
-        if (KEY_DISPLAY_DENSITY.equals(key)) {
-            final int max = getResources().getInteger(R.integer.display_density_max);
-            final int min = getResources().getInteger(R.integer.display_density_min);
-
-            int value = SystemProperties.getInt(PROP_DISPLAY_DENSITY, 0);
-            try {
-                value = Integer.parseInt((String) objValue);
-            } catch (NumberFormatException e) {
-                Log.e(TAG, "Invalid input", e);
-            }
-
-            // 0 disables the custom density, so do not check for the value, else…
-            if (value != 0) {
-                // …cap the value
-                if (value < min) {
-                    value = min;
-                } else if (value > max) {
-                    value = max;
-                }
-            }
-
-            SystemProperties.set(PROP_DISPLAY_DENSITY, String.valueOf(value));
-            mDisplayDensity.setText(String.valueOf(value));
-
-            // we handle it, return false
-            return false;
         }
         return true;
     }
